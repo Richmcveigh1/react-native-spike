@@ -8,6 +8,8 @@ import SecondPage from "./Components/SecondPage";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+ 
+
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -15,7 +17,6 @@ export default function App() {
           <Stack.Screen
             name="Home"
             component={Home}
-            
           />
           <Stack.Screen name="SecondPage" component={SecondPage} />
           {/* <StatusBar style="auto" /> */}
