@@ -1,7 +1,7 @@
-import { Text, Image, StyleSheet, View } from "react-native"; 
+import { Text, Image, StyleSheet, View, Button } from "react-native"; 
 
 
-export default function SecondPage() {
+export default function SecondPage({ navigation }) {
     const user = {
         username: "Mr Biscuits", 
         Age: 4,
@@ -17,7 +17,9 @@ export default function SecondPage() {
         <View style={styles.logo}>
         <Text>This is our second page</Text>
         <Text>{user.username}</Text>
-        
+        <Button 
+        title="in 2 deep"
+        onPress={() => navigation.navigate("ThirdPage")} />
         <Image style={styles.logo} source={{uri: user.img_url}}/>
         </View>
     )
